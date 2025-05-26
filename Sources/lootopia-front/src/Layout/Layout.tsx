@@ -1,5 +1,6 @@
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
 import Footer from './Footer';
+import Header from './Header';
 
 export type TLayout = {
   children?: ReactNode;
@@ -7,9 +8,11 @@ export type TLayout = {
   fullscreen?: boolean;
   disabled?: {
     footer?: boolean;
+    header?: boolean;
   };
   propsFooter?: ComponentPropsWithoutRef<typeof Footer>;
   FooterCmpt?: typeof Footer;
+  HeaderCmpt?: typeof Header;
 };
 
 export type TLayoutPage = TLayout & {
@@ -17,11 +20,19 @@ export type TLayoutPage = TLayout & {
   title?: ReactNode;
 };
 
-const Layout = ({ children, className = '', fullscreen = false, disabled = {}, propsFooter = {}, FooterCmpt = Footer }: TLayout) => {
+const Layout = ({
+  children,
+  className = '',
+  fullscreen = false,
+  disabled = {},
+  propsFooter = {},
+  FooterCmpt = Footer,
+  HeaderCmpt = Header,
+}: TLayout) => {
   return (
     <div className={`min-h-screen flex flex-col ${className}`}>
+      {!disabled.header && <HeaderCmpt />}
       <main className="flex-grow">{children}</main>
-
       {!disabled.footer && <FooterCmpt fullScreen={fullscreen} {...propsFooter} />}
     </div>
   );
