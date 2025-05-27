@@ -7,11 +7,12 @@ export type TLoader = PropsWithChildren & {
   mode?: keyof typeof MODES;
 };
 
-const Loader = ({ className, mode = MODES.none, message = TEXTS[mode], children }: TLoader) => (
+const Loader = ({ className = '', mode = MODES.none, message = TEXTS[mode], children }: TLoader) => (
   <>
     {mode !== MODES.none ? (
-      <div role="alert" aria-label={message} aria-live="polite" aria-busy className={className}>
-        <p className={DEFAULT_CLASSNAME}>{message}</p>
+      <div role="alert" aria-label={message} aria-live="polite" aria-busy className={`flex flex-col items-center justify-center p-4 ${className}`}>
+        <div className={DEFAULT_CLASSNAME} />
+        <p className="mt-2 text-sm text-gray-600">{message}</p>
       </div>
     ) : (
       children

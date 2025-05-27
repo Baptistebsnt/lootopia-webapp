@@ -2,7 +2,6 @@ import packageJson from '../../../package.json';
 
 type TFooter = {
   version?: string;
-  //   icon?: string;
   copyright?: string;
   year?: number;
   fullScreen?: boolean;
@@ -12,7 +11,6 @@ const Footer = ({
   fullScreen = false,
   year = new Date().getFullYear(),
   version = packageJson.version,
-  //   icon = logo,
   copyright = `© ${year} Lootopia Tous droits réservés - v${version}`,
 }: TFooter) => {
   return (
