@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   singleQuote: true,
   trailingComma: 'all',
@@ -5,4 +6,4 @@ module.exports = {
   arrowParens: 'avoid',
   tabWidth: 2,
   endOfLine: 'auto',
-}
+};
