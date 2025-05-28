@@ -10,6 +10,7 @@ import { MapPin, Navigation, Route, Loader2 } from "lucide-react"
 import { cn } from "@/shared/lib/utils"
 import Layout from "@/Layout/Layout"
 
+
 interface MapsProps {
   className?: string
 }
@@ -25,7 +26,7 @@ const Maps = ({ className }: MapsProps) => {
   const parisLonLat: [number, number] = [2.3522, 48.8566]
 
   const orsClient = new openrouteservice.Directions({
-    api_key: "5b3ce3597851110001cf6248c7f08d96975340a1870aee79d6d0142c",
+    api_key: import.meta.env.VITE_ORS_API_KEY ,
   })
 
   useEffect(() => {
