@@ -11,7 +11,7 @@ import { cn } from "@/shared/lib/utils"
 import Layout from "@/Layout/Layout"
 
 
-interface MapsProps {
+type MapsProps = {
   className?: string
 }
 
