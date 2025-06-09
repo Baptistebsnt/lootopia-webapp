@@ -30,7 +30,7 @@ const Layout = ({
   HeaderCmpt = Header,
 }: TLayout) => {
   return (
-    <div className={`min-h-screen flex flex-col ${className}`}>
+    <div className={`bg-yellow-300 min-h-screen flex flex-col ${className}`}>
       {!disabled.header && <HeaderCmpt />}
       <main className="flex-grow">{children}</main>
       {!disabled.footer && <FooterCmpt fullScreen={fullscreen} {...propsFooter} />}
