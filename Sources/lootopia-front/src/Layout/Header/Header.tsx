@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="bg-orange-400 shadow-sm">
+    <header className="wigth shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
@@ -16,7 +16,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link
               to={`${ROUTE_URL_AUTH}?mode=${AUTH_MODES.SIGN_IN}`}
-              className="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-base font-semibold rounded-md text-black bg-yellow-300 hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+              className="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-base font-semibold rounded-md text-white bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
             >
               Connexion
             </Link>

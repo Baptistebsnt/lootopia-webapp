@@ -18,7 +18,7 @@ const Home = () => <Layout>
         </div>
 
         <div className="relative z-10 flex flex-col items-center justify-center h-[80vh] text-center gap-6">
-          <h1 className="text-4xl font-extrabold text-orange-600">Bienvenue sur Lootopia !</h1>
+          <h1 className="text-4xl font-extrabold text-black">Bienvenue sur Lootopia !</h1>
           <p className="text-lg text-black">Vous êtes prêts à trouver ce trésor 💰 ? </p>
           <img src="/map.png" alt="Carte au trésor" className="w-24 h-24 animate-bounce mt-6" />
         </div>
